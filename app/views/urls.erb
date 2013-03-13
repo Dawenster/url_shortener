@@ -1,0 +1,8 @@
+<h1>Thanks! Here is your shortend URL:</h1>
+<div>
+  <% unless @errors %>
+    <%= @url.shortened_url %>
+  <% else %>
+    <%= "Please enter a correct URL" %>
+  <% end %>
+</div>
