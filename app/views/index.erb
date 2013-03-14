@@ -1,3 +1,6 @@
+<div class="login"><%= erb :_login_section %></div>
+
+
 <div class="container">
   <h1>Welcome to Bitly Redux!</h1>
   <form action="/urls" method="post" name="shortener-form">
@@ -11,3 +14,23 @@
     </ul>
   </form>
 </div>
+
+
+
+<div class="container">
+  <h1>Welcome! Create an Account</h1>
+  <p></p>
+
+  <form action="/user/new" method="post" name="create-account">
+    <ul>
+      <li>Name: <input type="text" name="user[name]"></li>
+      <li>Email Address: <input type="text" name="user[email]"></li>
+      <li>Password: <input type="password" name="user[password]"></li>
+      <li><input type="submit" value="Create!"></li>
+    </ul>  
+
+
+  </form>
+</div>
+
+
