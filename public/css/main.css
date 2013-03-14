@@ -1,13 +1,119 @@
+.blank-display {
+  display: none;
+}
+
 .container {
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  border: 5px solid #2C7BC9;
+  background-color: rgba(255,255,255,0.5)
 }
-th {
+
+ul {
+  list-style: none;
+}
+
+.login-area li {
+  display: inline;
+  font-size: .8em;
+  color: white;
+}
+
+.home {
+  padding: 0px;
+}
+
+.home ul {
+  text-align: center;
+  padding: 0px;
+}
+
+.home ul li {
+  display: inline;
   text-align: left;
 }
-/*
- .login {
-    float: right;
-  }*/
+
+.home li p {
+  text-align: center;
+  margin: 12px 0px 0px 0px;
+}
+
+.user-actions {
+  text-align: center;
+}
+
+.user-actions ul {
+  display: inline;
+}
+
+.if-no-urls {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.list-of-links {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.thanks-for-creating {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav {
+  background-color: #2C7BC9;
+  line-height: 50px;
+  padding: 8px 15px 8px 15px;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+}
+
+nav h1 {
+  color: white;
+  margin: 0px;
+  float: left;
+  font-family: 'Gabriela', serif;
+}
+
+.login-form {
+  text-align: right;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.login-form ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-image:url('../bg.jpg');
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center;
+}
+
+.btn-custom {
+  background-color: hsl(184, 100%, 82%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a3f8fe", endColorstr="#a3f8fe");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#a3f8fe), to(#a3f8fe));
+  background-image: -moz-linear-gradient(top, #a3f8fe, #a3f8fe);
+  background-image: -ms-linear-gradient(top, #a3f8fe, #a3f8fe);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a3f8fe), color-stop(100%, #a3f8fe));
+  background-image: -webkit-linear-gradient(top, #a3f8fe, #a3f8fe);
+  background-image: -o-linear-gradient(top, #a3f8fe, #a3f8fe);
+  background-image: linear-gradient(#a3f8fe, #a3f8fe);
+  border-color: #a3f8fe #a3f8fe hsl(184, 100%, 82%);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.00);
+  -webkit-font-smoothing: antialiased;
+}

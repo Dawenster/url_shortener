@@ -7,12 +7,6 @@ class Url < ActiveRecord::Base
   before_create :create_shortened_url
   before_save :increment_counter
 
-  # def include_user_id
-  #   puts @current_user.id
-  #   puts "Bye!"
-  #   self.user_id = @current_user.id
-  # end
-
   def create_shortened_url
     self.shortened_url = SecureRandom.urlsafe_base64(6)
   end

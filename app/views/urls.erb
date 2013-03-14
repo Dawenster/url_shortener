@@ -1,10 +1,17 @@
-
 <div>
   <% unless @url_error %>
-    <h1>Thanks! Here is your shortend URL:</h1>
-    <a href="http://localhost:9292/url/<%= @url.shortened_url %>"><%= @url.shortened_url %></a>
+  <ul class="thanks-for-creating">
+    <h1>Thanks! Here is your shortend URL:</h1><BR>
+    <li>Click to visit: <a href="http://localhost:9292/url/<%= @url.shortened_url %>">http://localhost:9292/url/<%= @url.shortened_url %></a></li>
   <% else %>
     <h1>WHOOPS!</h1>
-    <%= "Please enter a correct URL" %>
+    <li><%= "Please enter a correct URL" %></li>
+  <ul>
   <% end %>
+  <BR>
+  <ul class="thanks-for-creating">
+    <li><form action="/" method="get" name="want-create-url">
+      <input type="submit" value="I want to create a short url" class="btn-custom">
+    </form></li>
+  </ul>
 </div>

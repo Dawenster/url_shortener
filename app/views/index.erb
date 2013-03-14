@@ -1,32 +1,28 @@
 <div class="login"><%= erb :_login_section %></div>
 
-
 <div class="container">
-  <h1>Welcome to Bitly Redux!</h1>
-  <form action="/urls" method="post" name="shortener-form">
+  <h1>Please enter your URL below:</h1>
+  <form action="/urls" method="post" class="home" name="shortener-form">
     <ul> 
-      <li>Input your url:
-        <input type="text" name="original_url">
-      </li>
-      <li>
-        <input type="submit" value="Shorten!">
-      </li>
+      <li><input type="text" name="original_url" size="40"></li>
+      <li><input type="submit" value="Shorten" class="btn-custom"></li>
+      <li><p><a href="" class="account-creation">I want to create an account!</a></p></li>
     </ul>
   </form>
 </div>
 
 
 
-<div class="container">
-  <h1>Welcome! Create an Account</h1>
+<div class="container create-user-account blank-display">
+  <h1>Welcome! Create an account!</h1>
   <p></p>
 
-  <form action="/user/new" method="post" name="create-account">
+  <form action="/user/new" method="post" class="home" name="create-form">
     <ul>
-      <li>Name: <input type="text" name="user[name]"></li>
-      <li>Email Address: <input type="text" name="user[email]"></li>
-      <li>Password: <input type="password" name="user[password]"></li>
-      <li><input type="submit" value="Create!"></li>
+      <li>Name:<BR><input type="text" name="user[name]"></li><BR><BR>
+      <li>Email Address:<BR><input type="text" name="user[email]"></li><BR><BR>
+      <li>Password:<BR><input type="password" name="user[password]"></li><BR><BR>
+      <li><input type="submit" value="Create" class="btn-custom"></li>
     </ul>  
 
 

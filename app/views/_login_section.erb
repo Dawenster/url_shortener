@@ -1,17 +1,39 @@
-<div class="container">
-  <h1>Login</h1>
+<div class="login-section">
+  <nav>
+    <h1>Bitly Redux</h1>
     <% if @error %>
-    <script>$(document).ready(function() {
-      alert("Wrong email or password!");
-    });
-    </script>
-    <% @error = false %>
-  <% end %>
-  <form action="/authenticate" method="get" name="login-section">
-    <ul>
-      <li>Email Address: <input type="text" name="email"></li>
-      <li>Password: <input type="password" name="password"></li>
-      <li><input type="submit" value="Login!"></li>
-    </ul>  
-  </form>
+      <script>$(document).ready(function() {
+        alert("Wrong email or password!");});
+      </script>
+      <% @error = false %>
+    <% end %>
+
+    <% if session.has_key?(:user_name) %>
+
+    <div class="login-form">
+      <ul>
+        <li>   
+        <form action="/logout" method="get" name="logout">
+          <input type="submit" value="Logout" class="btn-custom">
+        </form>
+        </li>
+
+      </ul>
+    </div>
+
+    <% else %>
+
+    <div class="login-form">
+      <form class="login-area" action="/authenticate" method="get" name="login-section">
+        <ul>
+          <li>Email Address: <input type="text" name="email" size="10"></li>
+          <li>Password: <input type="password" name="password" size="10"></li>
+          <li><input type="submit" value="Login" class="btn-custom"></li>
+        </ul>  
+      </form>
+    </div>
+
+    <% end %>
+
+  </nav>
 </div>

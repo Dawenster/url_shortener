@@ -1,14 +1,34 @@
 <h1>Welcome <%= @current_user.name %></h1>
 
-<ul>
-  <li>
-    <% @list_of_user_urls.each do |url| %>
-      Url: <%= url.original_url %> Count: <%= url.counter %>
-    <% end %>
-  </li>
-  
-  <form action="/logout" method="get" name="logout">
-    <input type="submit" value="Logout!">
-  </form> 
+<% unless @list_of_user_urls == [] %>
+  <ul class="list-of-links">
+    <li>Here are your links!</li><BR>
+      <% @list_of_user_urls.each do |url| %>
+        <li>You visited <a href="<%= url.original_url %>"><%= url.original_url %></a> <%= url.counter %> times.</li>
+      <% end %>
+    </li>
+  </ul>
+<% else %>
+  <ul class="if-no-urls">
+    <li>You have not created any short urls yet - click below to create some!</li>
+  </ul>
+<% end %>
 
-</ul>    
+<BR><BR>
+
+<div class="user-actions">
+  <ul>
+    <li><form action="/" method="get" name="want-create-url">
+      <input type="submit" value="I want to create a short url" class="btn-custom">
+    </form></li>
+
+    <BR><BR>
+
+    <li><form action="/logout" method="get" name="logout">
+      <input type="submit" value="Logout" class="btn-custom">
+    </form></li>
+  </ul>
+</div>
+
+
+
