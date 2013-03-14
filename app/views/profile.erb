@@ -1,0 +1,14 @@
+<h1>Welcome <%= @current_user.name %></h1>
+
+<ul>
+  <li>
+    <% @list_of_user_urls.each do |url| %>
+      Url: <%= url.original_url %> Count: <%= url.counter %>
+    <% end %>
+  </li>
+  
+  <form action="/logout" method="get" name="logout">
+    <input type="submit" value="Logout!">
+  </form> 
+
+</ul>    

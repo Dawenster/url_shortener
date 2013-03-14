@@ -1,7 +1,9 @@
 post '/urls' do
-  # @url_error = Url.create.errors[:original_url].any?
   @url_error = Url.create(params).invalid?
+  current_user
+  params[:user_id] = @current_user.id if @current_user
   @url = Url.create(params)
+  
   erb :urls
 end
 
