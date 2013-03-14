@@ -2,7 +2,7 @@
 <div>
   <% unless @url_error %>
     <h1>Thanks! Here is your shortend URL:</h1>
-    <%= @url.shortened_url %>
+    <a href="http://localhost:9292/url/<%= @url.shortened_url %>"><%= @url.shortened_url %></a>
   <% else %>
     <h1>WHOOPS!</h1>
     <%= "Please enter a correct URL" %>
